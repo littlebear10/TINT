@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&display=swap');
+
+* {
+    font-family: 'Inter', serif;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: 0.2s;
+}
+
+body {
+    margin: 0;
+    background: #012c43;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow-x: none;
+}
+
+.container, .scenes {
+    height: 100%;
+}
+
+.container > .scenes > div {
+    background: #024d76;
+    height: 100%;
+    max-width: 500px;
+    width: 100vw;
+}
+
+h1, h2, h3, h4, h5, h6, p, b {
+    color: #ffffff;
+    margin: 0;
+}
+
+.break {
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+.scenes > div {
+    display: none;
+    text-align: center;
+}
+
+.scenes > .home {
+    display: block;
+}
+
+.scenes > .home > .logo {
+    display: flex;
+    justify-content: center;
+}
+
+.scenes > .home > .logo > h1 {
+    font-family: 'Itim', serif;
+    font-size: 120px;
+    letter-spacing: 20px;
+    text-shadow:
+        -3px -3px 0 #ffffff,
+        3px -3px 0 #ffffff,
+        -3px 3px 0 #ffffff,
+        3px 3px 0 #ffffff;
+}
+
+.scenes > .home > .logo > h1:nth-child(1) {
+    color: #580AFF;
+}
+
+.scenes > .home > .logo > h1:nth-child(2) {
+    color: #7839ff;
+}
+
+.scenes > .home > .logo > h1:nth-child(3) {
+    color: #580AFF;
+}
+
+.scenes > .home > .logo > h1:nth-child(4) {
+    color: #580AFF;
+}
+
+.scenes > .home > .buttons > button {
+    padding: 20px;
+    margin: 20px 0 20px 0;
+    width: 80%;
+    font-size: 38px;
+    border: solid 5px #000000;
+    outline: solid 3px #FFFFFF;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #FF0000, #FFD300, #A1FF0A, #0AEFFF, #580AFF);
+    font-weight: bold;
+}
+
+.scenes > .home > .buttons > button:hover {
+    transform: scale(1.1);
+}
+
+.scenes > .play > .head > button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 30px;
+    border: solid 3px #000000;
+    outline: solid 2px #FFFFFF;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #FF0000, #FFD300, #A1FF0A, #0AEFFF, #580AFF);
+    font-weight: bold;
+}
+
+.scenes > .play > .head > button:hover {
+    transform: scale(1.1);
+    letter-spacing: 3px;
+}
+
+.scenes > .play > .layout {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #00000055;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.scenes > .play > .layout > .game {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.scenes > .play > .layout > .scores {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.scenes > .play > .layout > .scores > h1 {
+    font-family: 'Itim', serif;
+    font-size: 50px;
+}
+
+.scenes > .play > .layout > .scores > h3 {
+    opacity: 0;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.scenes > .play > .layout > .scores > .lives > img {
+    margin: 5px;
+    width: 10%;
+}
+
+.scenes > .play > .layout > .game > button {
+    display: flex;
+    border-radius: 100%;
+    border: none;
+    transform: scale(0);
+}
+
+.scenes > .play > .modal-notactive {
+    display: none;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: fixed;
+    z-index: 998;
+}
+
+.scenes > .play > .modal-active {
+    position: fixed;
+    width: 300px;
+    height: 600px;
+    top: calc(50% - 400px);
+    left: calc(50% - 175px);
+    border-radius: 10px;
+    background-color: #000000;
+    border: solid 5px #FFFFFF;
+    box-shadow: 0 0 50px #FFFFFF;
+    padding: 40px 20px;
+}
+
+.scenes > .play > .modal-active > * {
+    background: #FFFFFF33;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.scenes > .play > .modal-active > button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 30px;
+    border: solid 3px #000000;
+    outline: solid 2px #FFFFFF;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #FF0000, #FFD300, #A1FF0A, #0AEFFF, #580AFF);
+    font-weight: bold;
+}
+
+.scenes > .play > .modal-active > button > img {
+    width: 26px;
+}
+
+.scenes > .play > .modal-active > button:hover {
+    transform: scale(1.1);
+    letter-spacing: 3px;
+}
+
+.scenes > .play > .modal-active > p {
+    background: none;
+    cursor: pointer;
+    display: none;
+}
+
+.scenes > .play > .modal-active > p:hover {
+    transform: scale(1.1);
+}
+
+.scenes > .lose {
+    padding: 20px;
+}
+
+.scenes > .lose > .title > h1 {
+    font-size: 50px;
+    margin: 30px;
+    color: #FF8700;
+    font-weight: bold;
+    padding: 10px;
+    background: #00000055;
+    border-radius: 20px;
+}
+
+.scenes > .play > .layout > .scores > .record > h2 {
+    color: #FFD300;
+    font-size: 30px;
+    font-family: 'Itim', serif;
+}
+
+.scenes > .play > .layout > .scores > .record > h2 > img {
+    width: 24px;
+}
+
+.scenes > .lose > .results > .scores > h1 {
+    font-size: 60px;
+    margin: 5px;
+    font-family: 'Itim', serif;
+}
+
+.scenes > .lose > .buttons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.scenes > .lose > .buttons > button {
+    opacity: 0;
+    padding: 10px;
+    margin: 10px;
+    font-size: 30px;
+    border: solid 3px #000000;
+    outline: solid 2px #FFFFFF;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #FF0000, #FFD300, #A1FF0A, #0AEFFF, #580AFF);
+    font-weight: bold;
+}
+
+.scenes > .lose > .buttons > button:hover {
+    transform: scale(1.1);
+}
+
+.scenes > .lose > .results > .scores > h1 {
+    font-size: 60px;
+    margin: 5px;
+    font-family: 'Itim', serif;
+}
+
+.scenes > .play > .pause-notactive {
+    display: none;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: fixed;
+    z-index: 999;
+}
+
+.scenes > .play > .pause-active {
+    position: absolute;
+    width: 300px;
+    height: 600px;
+    top: calc(50% - 400px);
+    left: calc(50% - 175px);
+    border-radius: 10px;
+    background-color: #000000;
+    border: solid 5px #FFFFFF;
+    box-shadow: 0 0 50px #FFFFFF;
+    padding: 40px 20px;
+}
+
+.scenes > .play > .pause-active > * {
+    background: #FFFFFF33;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.scenes > .play > .pause-active > .buttons > button {
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    font-size: 24px;
+    border: solid 3px #000000;
+    outline: solid 2px #FFFFFF;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #FF0000, #FFD300, #A1FF0A, #0AEFFF, #580AFF);
+    font-weight: bold;
+    width: 100%;
+}
+
+.scenes > .play > .pause-active > .buttons > button:hover {
+    transform: scale(1.1);
+    letter-spacing: 3px;
+}
+
+.scenes > .settings > .title > h1 {
+    font-size: 50px;
+    margin: 30px;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 10px;
+    background: #00000055;
+    border-radius: 20px;
+}
+
+.scenes > .settings > .head > button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 30px;
+    border: solid 3px #000000;
+    outline: solid 2px #FFFFFF;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #FF0000, #FFD300, #A1FF0A, #0AEFFF, #580AFF);
+    font-weight: bold;
+}
+
+.scenes > .settings > .head > button:hover {
+    transform: scale(1.1);
+    letter-spacing: 3px;
+}
+
+.scenes > .settings > .content > .language > button {
+    padding: 10px;
+    margin: 30px;
+    font-size: 40px;
+    border: solid 3px #000000;
+    outline: solid 2px #FFFFFF;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #FF0000, #FFD300, #A1FF0A, #0AEFFF, #580AFF);
+    font-weight: bold;
+}
+
+.scenes > .settings > .content > .language > button > img {
+    border-radius: 100%;
+    border: solid 3px #000000;
+}
+
+.scenes > .settings > .content > .language > button:hover {
+    transform: scale(1.1);
+    letter-spacing: 3px;
+}
+
+.scenes > .settings > .content > .links > button {
+    padding: 5px;
+    margin: 30px;
+    border-radius: 100%;
+    border: solid 3px #000000;
+    outline: solid 2px #FFFFFF;
+    background: #000000;
+    font-weight: bold;
+}
+
+.scenes > .settings > .content > .links > button > img {
+    width: 64px;
+}
+
+.scenes > .settings > .content > .links > button:hover {
+    transform: scale(1.1);
+}
